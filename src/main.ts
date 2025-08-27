@@ -7,8 +7,15 @@ import App from '@/App.vue'
 //引入全局组件--top
 import HospitalTop from '@/components/hospital_top/index.vue'
 import HospitalBottom from '@/components/hospital_bottom/index.vue'
+//引入路由
+import router from '@/router/index.ts';
 
-const app =createApp(App);
-app.component('HospitalTop',HospitalTop);
-app.component('HospitalBottom',HospitalBottom);
+
+const app = createApp(App);
+app.component('HospitalTop', HospitalTop);
+app.component('HospitalBottom', HospitalBottom);
+
+app.use(router);
+
+
 app.mount('#app');
