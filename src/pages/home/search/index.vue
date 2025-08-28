@@ -1,6 +1,6 @@
 <template>
     <div class="search">
-        <el-autocomplete clearable  placeholder="input name" />
+        <el-autocomplete clearable placeholder="input name" class="form" />
         <el-button type="primary" size="default" :icon="Search">搜索</el-button>
     </div>
 </template>
@@ -20,5 +20,11 @@ import { Search } from '@element-plus/icons-vue';
     justify-content: center;
     align-items: center;
     margin: 10px 0;
+
+    :deep(.el-input__wrapper) {
+        width: 30px;
+        margin-right :10px;
+        margin-left: 100px;
+    }
 }
 </style>
